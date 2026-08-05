@@ -15,7 +15,7 @@ exports.handler = async (event) => {
     }
 
     // Acompte = 15% du total, arrondi au centime, converti en centimes pour Stripe
-    const acompteCents = Math.round(total * 0.15 * 100);
+    const acompteCents = Math.round(total * 0.20 * 100);
 
     if (acompteCents < 50) {
       return { statusCode: 400, body: JSON.stringify({ error: 'Montant trop faible pour un paiement en ligne' }) };
