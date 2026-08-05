@@ -2178,10 +2178,14 @@ function goToWizardStep(stepKey, newPath){
   if(target) target.classList.add('active');
   renderProgress(stepKey);
   if(stepKey === 8){
-    const total = getCurrentTotal();
-    const acompte = Math.round(total * 0.20 * 100) / 100;
-    const el = document.getElementById('acompteAmount');
-    if(el) el.textContent = acompte;
+   const total = getCurrentTotal();
+   const acompte = Math.round(total * 0.20 * 100) / 100;
+   const el = document.getElementById('acompteAmount');
+   if(el) el.textContent = acompte;
+   const btn = document.getElementById('payAcompteBtn');
+   if(btn){ btn.disabled = false; btn.textContent = "Payer l'acompte →"; }
+   const errorEl = document.getElementById('acompteError');
+   if(errorEl) errorEl.style.display = 'none';
   }
   if(stepKey === 9){ loadCalendly(); }
 }
