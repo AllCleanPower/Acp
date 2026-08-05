@@ -2602,7 +2602,15 @@ baSlider.addEventListener('touchstart', (e) => { baDragging = true; setBaPositio
 baSlider.addEventListener('touchmove', (e) => { if(baDragging){ setBaPosition(e.touches[0].clientX); e.preventDefault(); } }, {passive:false});
 window.addEventListener('touchend', () => { baDragging = false; });
 
+window.addEventListener('pageshow', (event) => {
+  if(event.persisted){
+    const btn = document.getElementById('payAcompteBtn');
+    if(btn){ btn.disabled = false; btn.textContent = "Payer l'acompte →"; }
+  }
+});
+
 /* ===================== PAIEMENT ACOMPTE (STRIPE) ===================== */
+const payAcompteBtn = document.getElementById('payAcompteBtn');/* ===================== PAIEMENT ACOMPTE (STRIPE) ===================== */
 const payAcompteBtn = document.getElementById('payAcompteBtn');
 if(payAcompteBtn){
   payAcompteBtn.addEventListener('click', () => {
