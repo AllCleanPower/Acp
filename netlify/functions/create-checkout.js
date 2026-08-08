@@ -42,6 +42,7 @@ exports.handler = async (event) => {
       ],
       success_url: successUrl,
       cancel_url: cancelUrl,
+      allow_promotion_codes: true,
     });
 
     return {
