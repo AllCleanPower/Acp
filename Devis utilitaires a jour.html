@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0b">
+<title>Devis utilitaire | All Clean Power</title>
+<meta name="description" content="Demandez votre devis de nettoyage professionnel pour utilitaire : cabine, chargement ou prestation complète. Réponse personnalisée d'All Clean Power.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+:root{
+  --bg:#0D0D0D;
+  --bg-alt:#141414;
+  --bg-card:#181818;
+  --line:#2A2A2A;
+  --orange:#EA5601;
+  --orange-light:#FF7A2E;
+  --orange-dim:#7A3200;
+  --white:#F5F4F0;
+  --grey:#A8A6A0;
+  --grey-dim:#6E6C67;
+}
+.pro-quote{min-height:100vh;padding:48px 20px 80px;background:radial-gradient(circle at 80% 0,#3a1909 0,transparent 34%),var(--bg);color:var(--white);font-family:'Barlow',sans-serif}
+.quote-shell{max-width:1060px;margin:auto}
+.quote-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:58px}
+.quote-top img{width:210px}
+.back{color:var(--white);text-decoration:none;font-weight:700}
+.quote-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px}
+.quote-copy .eyebrow{display:flex;align-items:center;gap:14px;font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--orange-light);margin:0}
+.quote-copy .eyebrow .dash{width:26px;height:2px;background:var(--orange);flex-shrink:0;display:inline-block}
+.quote-copy h1{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.02em;font-size:clamp(52px,7vw,88px);line-height:.95;text-transform:uppercase;font-style:italic;transform:skewX(-3deg);margin:14px 0 22px}
+.quote-copy h1 em{color:var(--orange);font-style:normal}
+.quote-copy p{color:var(--grey);line-height:1.7;max-width:430px}
+.quote-points{margin-top:34px;padding:0;list-style:none}
+.quote-points li{padding:13px 0;border-bottom:1px solid var(--line);font-weight:600}
+.quote-points li:before{content:'✓';color:var(--orange);margin-right:12px}
+.contact-alt{margin-top:34px;padding-top:24px;border-top:1px solid var(--line);color:var(--grey);line-height:1.7;max-width:430px}
+.quote-form-pro{background:var(--bg-card);border:1px solid var(--line);padding:34px;border-radius:14px}
+.quote-form-pro h2{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.02em;font-size:32px;text-transform:uppercase;margin:0 0 8px}
+.quote-form-pro>p{color:var(--grey);margin:0 0 24px}
+.quote-form-pro label{display:block;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin:14px 0 6px;color:var(--grey)}
+.field-hint{display:block;margin-top:6px;font-family:'Barlow',sans-serif;font-size:12px;font-weight:400;text-transform:none;letter-spacing:0;color:var(--grey-dim)}
+.label-info{display:inline-flex;align-items:center;gap:7px}
+.info-icon{position:relative;display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;border:1px solid var(--orange);color:var(--orange-light);font-size:10px;font-family:'JetBrains Mono',monospace;font-weight:700;text-transform:none;letter-spacing:0;cursor:help;flex-shrink:0}
+.info-icon .tooltip{visibility:hidden;opacity:0;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:var(--bg);border:1px solid var(--line);color:var(--white);font-family:'Barlow',sans-serif;font-weight:400;font-size:12px;letter-spacing:0;text-transform:none;padding:10px 12px;border-radius:8px;width:230px;line-height:1.45;transition:opacity .15s;z-index:5;pointer-events:none}
+.info-icon:hover .tooltip,.info-icon:focus .tooltip{visibility:visible;opacity:1}
+.quote-form-pro input,.quote-form-pro select,.quote-form-pro textarea{width:100%;box-sizing:border-box;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:13px;color:var(--white);font:15px 'Barlow',sans-serif}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.quote-form-pro button{width:100%;margin-top:22px;border:1px solid var(--orange);background:var(--orange);color:#0D0D0D;font-weight:700;font-size:15px;padding:16px 30px;border-radius:3px;cursor:pointer;transition:background .2s, transform .2s;font-family:'Barlow',sans-serif}
+.quote-form-pro button:hover{background:var(--orange-light);border-color:var(--orange-light);transform:translateY(-2px)}
+.note{font-size:12px;color:var(--grey-dim);text-align:center;margin:14px 0 0}
+.conditions{margin-top:24px;font-size:12px;color:var(--grey-dim);line-height:1.6}
+@media(max-width:760px){
+  .quote-grid{grid-template-columns:1fr;gap:30px}
+  .quote-top img{width:170px}
+  .two{grid-template-columns:1fr}
+  .pro-quote{padding-top:26px}
+}
+</style>
+</head>
+<body>
+<main class="pro-quote">
+  <div class="quote-shell">
+
+    <div class="quote-top">
+      <a href="index.html"><img src="assets/images/logo-all-clean-power-clair.png" alt="All Clean Power"></a>
+      <a class="back" href="index.html#professionnels">← Retour au site</a>
+    </div>
+
+    <div class="quote-grid">
+
+      <section class="quote-copy">
+        <p class="eyebrow"><span class="dash"></span>Utilitaires professionnels</p>
+        <h1>Votre utilitaire,<br><em>sur devis.</em></h1>
+        <p>Indiquez-nous votre utilitaire et son état : nous vous préparons une estimation précise et adaptée à votre besoin.</p>
+        <p class="contact-alt">Vous préférez échanger directement avec nous ? Contactez-nous par téléphone afin de définir ensemble votre besoin et obtenir un devis personnalisé.</p>
+      </section>
+
+      <form class="quote-form-pro" id="pro-form">
+        <h2>Demander un devis utilitaire</h2>
+        <p>Réponse personnalisée après étude de votre besoin.</p>
+
+        <div class="two">
+          <label for="societe">Société / garage
+            <input id="societe" name="societe" placeholder="Optionnel" autocomplete="organization">
+            <span class="field-hint">Laissez vide si vous êtes un particulier</span>
+          </label>
+          <label for="nom">Votre nom
+            <input required id="nom" name="nom" placeholder="Nom et prénom" autocomplete="name">
+          </label>
+        </div>
+
+        <div class="two">
+          <label for="telephone">Téléphone
+            <input required id="telephone" name="telephone" type="tel" placeholder="06 00 00 00 00" autocomplete="tel">
+          </label>
+          <label for="email">E-mail
+            <input required id="email" name="email" type="email" placeholder="vous@entreprise.fr" autocomplete="email">
+          </label>
+        </div>
+
+        <label for="parc">Gabarit de l'utilitaire
+          <select required id="parc" name="parc">
+            <option value="">Sélectionner</option>
+            <option>Petit utilitaire</option>
+            <option>Utilitaire moyen</option>
+            <option>Grand fourgon</option>
+            <option>Utilitaire atelier ou benne</option>
+          </select>
+        </label>
+
+        <div class="two">
+          <label for="volume">
+            <span class="label-info">Zone à nettoyer<span class="info-icon" tabindex="0">i<span class="tooltip">« Intérieur + extérieur » comprend la cabine, l'espace de chargement et l'extérieur complet du véhicule.</span></span></span>
+            <select required id="volume" name="volume">
+              <option value="">Sélectionner</option>
+              <option>Cabine uniquement</option>
+              <option>Espace de chargement uniquement</option>
+              <option>Cabine et chargement</option>
+              <option>Extérieur uniquement</option>
+              <option>Intérieur + extérieur</option>
+            </select>
+          </label>
+          <label for="prestation">État général
+            <select required id="prestation" name="prestation">
+              <option value="">Sélectionner</option>
+              <option>État normal</option>
+              <option>Salissures importantes</option>
+              <option>Très sale</option>
+              <option>À évaluer sur photos</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="two">
+          <label for="ville">Lieu d'intervention
+            <input required id="ville" name="ville" placeholder="Ville / code postal" autocomplete="address-level2">
+          </label>
+          <label for="frequence">Fréquence souhaitée
+            <select id="frequence" name="frequence">
+              <option>Intervention ponctuelle</option>
+              <option>Régulière</option>
+              <option>À définir ensemble</option>
+            </select>
+          </label>
+        </div>
+
+        <label for="details">Informations utiles
+          <textarea id="details" name="details" rows="4" placeholder="Modèles concernés, état général, délai souhaité, besoins particuliers..."></textarea>
+        </label>
+
+        <button type="submit">Envoyer ma demande</button>
+        <p class="note">Vous pourrez nous transmettre les photos des véhicules sur WhatsApp après l'envoi.</p>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+<script>
+document.getElementById('pro-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const labels = {
+    societe: 'Société / garage',
+    nom: 'Nom',
+    telephone: 'Téléphone',
+    email: 'E-mail',
+    parc: 'Gabarit',
+    volume: 'Zone à nettoyer',
+    prestation: 'État général',
+    ville: 'Lieu d\'intervention',
+    frequence: 'Fréquence',
+    details: 'Informations utiles'
+  };
+
+  const data = new FormData(this);
+  let message = '*Demande de devis professionnel*\n\n';
+
+  for (const [key, value] of data) {
+    if (value) {
+      const label = labels[key] || key;
+      message += `${label} : ${value}\n`;
+    }
+  }
+
+  window.location.href = 'https://wa.me/33698542974?text=' + encodeURIComponent(message);
+});
+</script>
+</body>
+</html>
