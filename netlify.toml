@@ -4,3 +4,48 @@
 
 [functions]
   node_bundler = "esbuild"
+
+# ---------- Forcer HTTPS et le domaine principal ----------
+[[redirects]]
+  from = "http://allcleanpower.fr/*"
+  to = "https://allcleanpower.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.allcleanpower.fr/*"
+  to = "https://allcleanpower.fr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.allcleanpower.fr/*"
+  to = "https://allcleanpower.fr/:splat"
+  status = 301
+  force = true
+
+# ---------- En-têtes de sécurité ----------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+
+# ---------- Cache des fichiers statiques ----------
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

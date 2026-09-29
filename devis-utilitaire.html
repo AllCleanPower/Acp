@@ -6,6 +6,26 @@
 <meta name="theme-color" content="#0b0b0b">
 <title>Devis utilitaire | All Clean Power</title>
 <meta name="description" content="Demandez votre devis de nettoyage professionnel pour utilitaire : cabine, chargement ou prestation complète. Réponse personnalisée d'All Clean Power.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="canonical" href="https://allcleanpower.fr/devis-utilitaire.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="All Clean Power">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Devis utilitaire | All Clean Power">
+<meta property="og:description" content="Demandez votre devis de nettoyage professionnel pour utilitaire : cabine, chargement ou prestation complète. Réponse personnalisée d'All Clean Power.">
+<meta property="og:url" content="https://allcleanpower.fr/devis-utilitaire.html">
+<meta property="og:image" content="https://allcleanpower.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo All Clean Power, detailing auto à domicile à Orléans">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Devis utilitaire | All Clean Power">
+<meta name="twitter:description" content="Demandez votre devis de nettoyage professionnel pour utilitaire : cabine, chargement ou prestation complète. Réponse personnalisée d'All Clean Power.">
+<meta name="twitter:image" content="https://allcleanpower.fr/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -22,7 +42,7 @@ html,body{margin:0;padding:0;background:#0D0D0D;}
   --orange-dim:#7A3200;
   --white:#F5F4F0;
   --grey:#A8A6A0;
-  --grey-dim:#6E6C67;
+  --grey-dim:#908E88;
 }
 .pro-quote{min-height:100vh;padding:48px 20px 80px;background:radial-gradient(circle at 80% 0,#3a1909 0,transparent 34%),var(--bg);color:var(--white);font-family:'Barlow',sans-serif}
 .quote-shell{max-width:1060px;margin:auto}
@@ -53,6 +73,15 @@ html,body{margin:0;padding:0;background:#0D0D0D;}
 .quote-form-pro button{width:100%;margin-top:22px;border:1px solid var(--orange);background:var(--orange);color:#0D0D0D;font-weight:700;font-size:15px;padding:16px 30px;border-radius:3px;cursor:pointer;transition:background .2s, transform .2s;font-family:'Barlow',sans-serif}
 .quote-form-pro button:hover{background:var(--orange-light);border-color:var(--orange-light);transform:translateY(-2px)}
 .note{font-size:12px;color:var(--grey-dim);text-align:center;margin:14px 0 0}
+.field-error{display:block;margin-top:6px;font-family:'Barlow',sans-serif;font-size:12.5px;font-weight:500;text-transform:none;letter-spacing:0;color:#FF6B6F}
+.quote-form-pro [aria-invalid="true"]{border-color:#E5484D !important}
+.form-error{margin:18px 0 0;padding:12px 14px;border:1px solid rgba(229,72,77,.5);background:rgba(229,72,77,.08);border-radius:6px;color:#FF9DA0;font-size:14px;line-height:1.5}
+.form-error a{color:#FFFFFF}
+.rgpd-note{font-size:12px;color:var(--grey-dim);text-align:center;margin:10px 0 0;line-height:1.5}
+.rgpd-note a{color:var(--grey)}
+.legal-footer{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;padding:34px 16px 40px;font-family:'Barlow',sans-serif;font-size:13px}
+.legal-footer a{color:var(--grey);text-decoration:none}
+.legal-footer a:hover{color:var(--white)}
 .form-success{background:var(--bg-card);border:1px solid var(--line);padding:34px;border-radius:14px;text-align:center}
 .form-success h2{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.02em;font-size:32px;text-transform:uppercase;margin:0 0 14px;color:var(--orange-light)}
 .form-success p{color:var(--grey);line-height:1.6;margin:0}
@@ -89,7 +118,7 @@ html,body{margin:0;padding:0;background:#0D0D0D;}
         <p class="contact-alt">Vous préférez échanger directement avec nous ? Contactez-nous par téléphone afin de définir ensemble votre besoin et obtenir un devis personnalisé.</p>
       </section>
 
-      <form class="quote-form-pro" id="pro-form" name="devis-utilitaire" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="quote-form-pro" id="pro-form" name="devis-utilitaire" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
         <input type="hidden" name="form-name" value="devis-utilitaire">
         <input type="hidden" name="bot-field">
         <h2>Demander un devis utilitaire</h2>
@@ -107,7 +136,7 @@ html,body{margin:0;padding:0;background:#0D0D0D;}
 
         <div class="two">
           <label for="telephone">Téléphone
-            <input required id="telephone" name="telephone" type="tel" placeholder="06 00 00 00 00" autocomplete="tel">
+            <input required id="telephone" name="telephone" type="tel" inputmode="tel" placeholder="06 00 00 00 00" autocomplete="tel">
           </label>
           <label for="email">E-mail
             <input required id="email" name="email" type="email" placeholder="vous@entreprise.fr" autocomplete="email">
@@ -164,8 +193,10 @@ html,body{margin:0;padding:0;background:#0D0D0D;}
           <textarea id="details" name="details" rows="4" placeholder="Modèles concernés, état général, délai souhaité, besoins particuliers..."></textarea>
         </label>
 
+        <p class="form-error" id="form-error" role="alert" hidden>L'envoi a échoué. Vérifiez votre connexion et réessayez, ou contactez-nous au <a href="tel:+33698542974">06 98 54 29 74</a>.</p>
         <button type="submit">Envoyer ma demande</button>
         <p class="note">Vous pouvez également nous envoyer des photos par WhatsApp pour affiner l'estimation.</p>
+        <p class="rgpd-note">Vos données servent uniquement à traiter votre demande. <a href="/confidentialite">Politique de confidentialité</a></p>
       </form>
 
       <div class="form-success" id="form-success" style="display:none;">
@@ -176,27 +207,82 @@ html,body{margin:0;padding:0;background:#0D0D0D;}
     </div>
   </div>
 </main>
+<nav class="legal-footer" aria-label="Informations légales"><a href="/mentions-legales">Mentions légales</a><a href="/cgv">CGV</a><a href="/cgu">CGU</a><a href="/confidentialite">Confidentialité &amp; RGPD</a></nav>
 
 <script>
-document.getElementById('pro-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const form = this;
-  const formData = new FormData(form);
-
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams(formData).toString()
-  })
-    .then(() => {
-      form.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
+(function(){
+  const form = document.getElementById('pro-form');
+  if(!form) return;
+  const phoneOk = v => /^(?:\+33|0)[1-9]\d{8}$/.test(v.replace(/[\s.\-]/g,''));
+  const emailOk = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+  const labelOf = f => {
+    const l = f.closest('label');
+    if(!l) return 'ce champ';
+    const c = l.cloneNode(true);
+    c.querySelectorAll('input,select,textarea,.tooltip,.info-icon,.field-hint,.field-error').forEach(n => n.remove());
+    const t = c.textContent.replace(/\s+/g,' ').trim();
+    return t ? '« ' + t + ' »' : 'ce champ';
+  };
+  const messageFor = f => {
+    const v = f.value || '';
+    if(f.required && !v.trim()){
+      return f.tagName === 'SELECT' ? 'Merci de faire un choix pour ' + labelOf(f) + '.' : 'Merci de renseigner ' + labelOf(f) + '.';
+    }
+    if(!v.trim()) return '';
+    if(f.type === 'tel' && !phoneOk(v)) return 'Numéro invalide. Exemple : 06 12 34 56 78.';
+    if(f.type === 'email' && !emailOk(v)) return 'Adresse e-mail invalide. Exemple : vous@exemple.fr.';
+    return '';
+  };
+  const show = (f, msg) => {
+    let err = document.getElementById('err-' + f.name);
+    if(msg){
+      if(!err){
+        err = document.createElement('span');
+        err.className = 'field-error';
+        err.id = 'err-' + f.name;
+        f.insertAdjacentElement('afterend', err);
+      }
+      err.textContent = msg;
+      f.setAttribute('aria-invalid','true');
+      f.setAttribute('aria-describedby', err.id);
+    } else {
+      if(err) err.remove();
+      f.removeAttribute('aria-invalid');
+      f.removeAttribute('aria-describedby');
+    }
+  };
+  const fields = Array.from(form.querySelectorAll('input:not([type=hidden]), select, textarea')).filter(f => f.name !== 'bot-field');
+  fields.forEach(f => {
+    f.addEventListener('blur', () => show(f, messageFor(f)));
+    const live = () => { if(f.getAttribute('aria-invalid')) show(f, messageFor(f)); };
+    f.addEventListener('input', live);
+    f.addEventListener('change', live);
+  });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    let first = null;
+    fields.forEach(f => { const m = messageFor(f); show(f, m); if(m && !first) first = f; });
+    if(first){ first.focus(); return; }
+    const btn = form.querySelector('button[type=submit]');
+    const errBox = document.getElementById('form-error');
+    if(errBox) errBox.hidden = true;
+    if(btn){ btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = 'Envoi en cours…'; }
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
     })
-    .catch(() => {
-      form.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    });
-});
+      .then(r => {
+        if(!r.ok) throw new Error('HTTP ' + r.status);
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      })
+      .catch(() => {
+        if(errBox) errBox.hidden = false;
+        if(btn){ btn.disabled = false; btn.textContent = btn.dataset.label; }
+      });
+  });
+})();
 function initGooglePlaces(){
   if(!window.google || !window.google.maps || !window.google.maps.places) return;
   const input = document.getElementById('ville');
